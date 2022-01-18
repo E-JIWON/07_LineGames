@@ -1,0 +1,321 @@
+@charset "utf-8";
+@import "../common.scss";
+
+
+@media all and (max-width:767px) {
+     html {
+          height: 100%;
+          overflow: hidden;
+     }
+     //============================================게임서브 ST
+     header{
+          width: 100%;
+          height: 10vh;
+          float: left;
+          position: fixed;
+          top:0;
+          z-index: 4000;
+          background-color: transparent;
+          a{        
+          
+               div{
+                    float: left;
+                    height: 8vh;
+                    margin: 1vh 3vw;
+                    width: 40vw;
+                    background-image: url("../../img/lineGames_logo.png");
+                    display: inline-block;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+               }
+          }
+          ul{
+               float: right;
+               // a{
+                    li{
+                         text-align: center;
+                         font-family: $Noto;
+                         color: $white;
+                         display: inline-block;
+                         width: 10vw;
+                         font-size: 4.5vw;
+                         height: 8vh;
+                         margin:1vh 1vw;
+                         line-height: 8vh;
+                    }
+                    .last_li{
+                         margin-right:3vw;
+                    }
+                    li:hover{
+                         cursor: pointer;
+                    }
+               // }
+          }
+     }
+     
+     .popup_layer{
+          display: none;
+     }
+     .join_popup{
+          position: fixed;
+          background-color: rgba(0,0,0,0.9);
+          border-radius: 2vw;
+          -webkit-border-radius: 2vw;
+          -moz-border-radius: 2vw;
+          -ms-border-radius: 2vw;
+          -o-border-radius: 2vw;
+          z-index: 8000;
+          width: 80vw;
+          height: 60vh;
+          top: 50%;
+          left: 50%;
+          margin-left: -40vw;
+          margin-top: -30vh;
+          display: none;
+          font-family: $Noto;
+          flex-direction: row;
+          flex-wrap: wrap;
+     
+          h2{
+               text-align: center;
+               font-weight: 900;
+               font-size: 3vw;
+               color: white;
+               width: 100%;
+               height: 10%;
+               line-height: 11vw;
+          }
+          .join_se{
+               width: 100%;
+               height: 70%;
+               display: flex;
+               justify-content:space-evenly;
+               flex-direction:column;
+               .join_div{
+                    // background-color: $green;
+                    // border: 2px solid $green;
+                    height: 100%;
+                    width: 100%;
+                    position: relative;
+                    overflow: hidden;
+                    background-size: cover;
+                    p{
+                         // margin-top:200%;
+                         position: absolute;
+                         z-index: 9000;
+                         color: $white;
+                         // font-weight: 900;
+                         font-size: 3.5vw;
+                         font-family: $Noto;
+                         background-color: rgba(0,0,0,0.5);
+                         width: 100%;
+                         height: 15%;
+                         padding:15% 0;
+                         text-align: center;
+                    }
+               }
+               .join_div:hover{cursor: pointer;}
+               .join_div:first-child{
+                    background-image: url("../../img/join_us1.jpg");
+               }
+               .join_div:nth-child(2){
+                    background-image: url("../../img/join_us2.jpg");
+               }
+               .join_div:last-child{
+                    background-image: url("../../img/join_us3.jpg");
+               }
+          }
+          .btn_wrap{
+               width: 100%;
+               // height: 20%;
+               display: flex;
+               justify-content: center;
+          .join_close,.join_us_site{
+               display: inline-block;
+               border:2px solid white;
+               width: 20vw;
+               height: 5vw;
+               line-height: 4.8vw;
+               font-size: 1.5vw;
+               color: white;
+               text-align: center;
+               bottom:5%;
+               margin:2vw;
+          }
+               .join_close:hover, .join_us_site:hover{
+                    cursor: pointer;
+                    background-color: $green;
+                    color: $white;
+               }
+          }
+     }
+
+
+     .body_cont{ 
+          margin: 0;
+          height: 100%;
+          overflow-y: scroll;
+          overflow-x: hidden;
+          perspective: 1px;
+          transform-style: preserve-3d;
+     }
+     .game_bgimg{
+          position: relative;
+          height: 80vh;
+          width: 100vw;
+          margin-top:10vh;
+          transform-style: inherit;
+     }
+     .game_bgimg:before{
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: 50% 50% / cover;
+          transform: translateZ(-1px) scale(2);
+          z-index: -2;
+     }
+     .game_bgimg.unde::before{background-image: url("../../img/sub_game_unde2.jpg");}
+     .game_bgimg.smas::before{background-image: url("../../img/sub_game_sma.png");}
+     .game_bgimg.guad::before{background-image: url("../../img/sub_game_gadi.png");}
+     .game_bgimg.buri::before{background-image: url("../../img/sub_game_buri.png");}
+     
+     .game_info_container{
+          position: relative;
+          background-color: $white;
+          transform: translateZ(0);
+          text-align: center;
+          width: 100%;
+          height: 60vw;
+          padding: 40vw 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+          font-family: $Noto;
+     
+          h4{
+               font-size: 12vw;
+               font-weight: 800;
+               color: $green;
+          }
+          div{
+               p{
+                    font-size: 3.5vw;
+                    margin:2% 5%;
+                    line-height: 200%;
+                    color: $gray;
+               }
+          }
+     }
+     .game_video_wrap{
+          position: relative;
+          // padding: 25vh 0 15vh 0;
+          width: 100%;
+          transform: translateZ(0);
+          opacity: 0;
+          background-color: transparent;
+          video{
+               cursor: pointer;
+               width: 50%;
+               margin: 0 25%;
+          }
+     }
+     .game_info{
+          background-color: $black;
+          width: 100%;
+          height: 30vh;
+          padding-top: 5vh;
+          ul{
+               width: 70%;
+               margin:0 15%;
+               display: flex;
+               color: $white;
+               font-size: 3vw;
+               
+               flex-direction: row;
+               flex-wrap: wrap;
+               text-align: center;
+               font-family: $Noto;
+               li{
+                    margin:0.8rem 0;
+               }
+               li:nth-child(2n -1){
+                    width: 15%;
+                    color: $green;
+               }
+               li:nth-child(2n){
+                    width: 35%;
+               }
+          }
+          span{
+               display: block;
+               width: 20%;
+               margin: 3vw auto;
+               border:1px solid $green;
+               text-align: center;
+               padding:1.5rem;
+               font-size: 3vw;
+               font-weight: 800;
+               a{
+                    color:$green;
+               }
+          }
+          span:hover{
+               cursor: pointer;
+               background-color: $white;
+          }
+     }
+     
+     footer{
+          width: 80%;
+          height: 20vh;
+          position: relative;
+          background-color: $black;
+          color: white;
+          padding:0vh 10%;
+
+          section:first-child{
+               border-bottom: 2px solid $green;
+               padding-bottom: 3%;
+               display: none;
+               ul{
+                    display: flex;
+                    li{
+                         font-size: 1.2rem;
+                         padding:0 1rem;
+                         width: 25%;
+                         text-align: center;
+                         border-right: 2px solid $green;
+                         a{
+                              font-family: $Noto;
+                              color: $gray;
+                         }
+                    }
+                    li:last-child{
+                         border-right:none;
+                    }
+               }
+          }
+          section:last-child{
+               display: flex;
+               div{
+                    width: 100%;
+                    margin-top : 1rem;
+                    img{
+                         margin:3% 0 0 8%;
+                         width: 70%;
+                    }
+                    span{
+                         margin:2% 0 2% 8%;
+                         display: block; font-family: $naGo;
+                    }
+               }
+          }
+     }
+}
+
+

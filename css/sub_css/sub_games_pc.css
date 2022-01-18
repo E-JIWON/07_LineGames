@@ -1,0 +1,455 @@
+a {
+  text-decoration: none;
+  color: navy;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+@-webkit-keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+body {
+  max-width: 100vw;
+  background-color: #fff;
+}
+
+@media all and (min-width: 1025px) {
+  header {
+    width: 100%;
+    height: 10vh;
+    float: left;
+    position: fixed;
+    top: 0;
+    z-index: 4000;
+    background-color: transparent;
+  }
+  header a div {
+    float: left;
+    height: 8vh;
+    margin: 1vh 3vw;
+    width: 15vw;
+    background-image: url("../../img/lineGames_logo.png");
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  header ul {
+    float: right;
+  }
+  header ul li {
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+    color: #fff;
+    display: inline-block;
+    width: 6vw;
+    font-size: 1.5vw;
+    height: 8vh;
+    margin: 1vh 1vw;
+    line-height: 8vh;
+  }
+  header ul .last_li {
+    margin-right: 3vw;
+  }
+  header ul li:hover {
+    cursor: pointer;
+  }
+  .popup_layer {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 2vw;
+    -webkit-border-radius: 2vw;
+    -moz-border-radius: 2vw;
+    -ms-border-radius: 2vw;
+    -o-border-radius: 2vw;
+    z-index: 8000;
+    width: 90vw;
+    height: 90vh;
+    top: 50%;
+    left: 50%;
+    margin-left: -45vw;
+    margin-top: -45vh;
+    display: none;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .popup_layer h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 3.5vw;
+    color: white;
+    margin: 2% 0;
+  }
+  .popup_layer .popup_div {
+    width: 80%;
+    margin: 0 5%;
+    background-color: white;
+    padding: 5% 5%;
+    overflow: auto;
+    height: 50%;
+  }
+  .popup_layer .popup_div p {
+    margin: 1rem 0;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .popup_layer .popup_div p strong {
+    font-weight: bold;
+  }
+  .popup_layer .popup_div table {
+    border: 1px solid black;
+  }
+  .popup_layer .popup_close_btn {
+    display: block;
+    border: 2px solid white;
+    width: 15vw;
+    height: 3vw;
+    margin: 1% auto;
+    line-height: 2.8vw;
+    font-size: 1.5vw;
+    color: white;
+    text-align: center;
+  }
+  .popup_layer .popup_close_btn:hover {
+    cursor: pointer;
+    background-color: #00B900;
+    color: #fff;
+  }
+  .join_popup {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 2vw;
+    -webkit-border-radius: 2vw;
+    -moz-border-radius: 2vw;
+    -ms-border-radius: 2vw;
+    -o-border-radius: 2vw;
+    z-index: 8000;
+    width: 80vw;
+    height: 60vh;
+    top: 50%;
+    left: 50%;
+    margin-left: -40vw;
+    margin-top: -30vh;
+    display: none;
+    font-family: "Noto Sans KR", sans-serif;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .join_popup h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 2vw;
+    color: white;
+    width: 100%;
+    height: 20%;
+    line-height: 250%;
+  }
+  .join_popup .join_se {
+    width: 100%;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .join_popup .join_se .join_div {
+    border: 2px solid #fff;
+    height: 100%;
+    width: 20%;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    transition: 0.5s linear;
+    -webkit-transition: 0.5s linear;
+    -moz-transition: 0.5s linear;
+    -ms-transition: 0.5s linear;
+    -o-transition: 0.5s linear;
+  }
+  .join_popup .join_se .join_div p {
+    position: absolute;
+    z-index: 9000;
+    color: #fff;
+    font-size: 1.5vw;
+    font-family: "Noto Sans KR", sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+    height: 10%;
+    padding: 45% 0;
+  }
+  .join_popup .join_se .join_div:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+  .join_popup .join_se .join_div:first-child {
+    background-image: url("../../img/join_us1.jpg");
+  }
+  .join_popup .join_se .join_div:nth-child(2) {
+    background-image: url("../../img/join_us2.jpg");
+  }
+  .join_popup .join_se .join_div:last-child {
+    background-image: url("../../img/join_us3.jpg");
+  }
+  .join_popup .btn_wrap {
+    width: 100%;
+    height: 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .join_popup .btn_wrap .join_close, .join_popup .btn_wrap .join_us_site {
+    display: inline-block;
+    border: 2px solid white;
+    width: 15vw;
+    height: 3vw;
+    line-height: 2.8vw;
+    font-size: 1.5vw;
+    color: white;
+    text-align: center;
+    bottom: 5%;
+    margin: 2vw;
+  }
+  .join_popup .btn_wrap .join_close:hover, .join_popup .btn_wrap .join_us_site:hover {
+    cursor: pointer;
+    background-color: #00B900;
+    color: #fff;
+  }
+  .body_cont {
+    margin: 0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-perspective: 1px;
+            perspective: 1px;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+  }
+  .game_bgimg {
+    position: relative;
+    height: 80vh;
+    width: 100vw;
+    margin-top: 10vh;
+    -webkit-transform-style: inherit;
+            transform-style: inherit;
+  }
+  .game_bgimg:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: 50% 50% / cover;
+    transform: translateZ(-1px) scale(2);
+    z-index: -2;
+    -webkit-transform: translateZ(-1px) scale(2);
+    -moz-transform: translateZ(-1px) scale(2);
+    -ms-transform: translateZ(-1px) scale(2);
+    -o-transform: translateZ(-1px) scale(2);
+  }
+  .game_bgimg.unde::before {
+    background-image: url("../../img/sub_game_unde2.jpg");
+  }
+  .game_bgimg.smas::before {
+    background-image: url("../../img/sub_game_sma.png");
+  }
+  .game_bgimg.guad::before {
+    background-image: url("../../img/sub_game_gadi.png");
+  }
+  .game_bgimg.buri::before {
+    background-image: url("../../img/sub_game_buri.png");
+  }
+  .game_info_container {
+    position: relative;
+    background-color: #fff;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    text-align: center;
+    width: 100%;
+    height: 40vh;
+    padding: 25vh 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .game_info_container h4 {
+    font-size: 5vw;
+    font-weight: 800;
+    color: #00B900;
+  }
+  .game_info_container div p {
+    font-size: 1.1vw;
+    margin: 4% 0;
+    line-height: 200%;
+    color: #777;
+  }
+  .game_info_container div .p_title {
+    font-size: 1.2vw;
+    font-weight: 800;
+  }
+  .game_video_wrap {
+    position: relative;
+    padding: 25vh 0 15vh 0;
+    width: 100%;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 0;
+    background-color: transparent;
+  }
+  .game_video_wrap video {
+    cursor: pointer;
+    width: 50%;
+    margin: 0 25%;
+  }
+  .game_info {
+    background-color: #000;
+    width: 100%;
+    height: 30vw;
+    padding-top: 5vh;
+  }
+  .game_info ul {
+    width: 70%;
+    margin: 0 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #fff;
+    font-size: 1.35rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .game_info ul li {
+    margin: 0.8rem 0;
+  }
+  .game_info ul li:nth-child(2n -1) {
+    width: 15%;
+    color: #00B900;
+  }
+  .game_info ul li:nth-child(2n) {
+    width: 35%;
+  }
+  .game_info span {
+    display: block;
+    width: 20%;
+    margin: 4rem auto;
+    border: 1px solid #00B900;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .game_info span a {
+    color: #00B900;
+  }
+  .game_info span:hover {
+    cursor: pointer;
+    background-color: #fff;
+  }
+  footer {
+    width: 80%;
+    height: 20vh;
+    position: relative;
+    background-color: #000;
+    color: white;
+    padding: 5vh 10%;
+  }
+  footer section:first-child {
+    border-bottom: 2px solid #00B900;
+    padding-bottom: 3%;
+  }
+  footer section:first-child ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer section:first-child ul li {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    width: 25%;
+    text-align: center;
+    border-right: 2px solid #00B900;
+    font-family: "Noto Sans KR", sans-serif;
+    color: #777;
+  }
+  footer section:first-child ul li a {
+    font-family: "Noto Sans KR", sans-serif;
+    color: #777;
+  }
+  footer section:first-child ul li:hover {
+    cursor: pointer;
+  }
+  footer section:first-child ul li:last-child {
+    border-right: none;
+  }
+  footer section:last-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer section:last-child div {
+    width: 50%;
+    margin-top: 1rem;
+  }
+  footer section:last-child div img {
+    margin: 3% 0 0 8%;
+    width: 40%;
+  }
+  footer section:last-child div span {
+    margin: 2% 0 2% 8%;
+    display: block;
+    font-family: "Nanum Gothic Coding", monospace;
+  }
+}
+/*# sourceMappingURL=sub_games_pc.css.map */

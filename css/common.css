@@ -1,0 +1,39 @@
+a {
+  text-decoration: none;
+  color: navy;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+@-webkit-keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+body {
+  max-width: 100vw;
+  background-color: #fff;
+}
+/*# sourceMappingURL=common.css.map */
